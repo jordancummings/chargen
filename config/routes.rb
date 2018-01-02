@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :characters
   get 'pages/home'
 
   get 'pages/generator'
