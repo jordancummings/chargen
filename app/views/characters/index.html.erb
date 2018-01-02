@@ -3,10 +3,10 @@
 <%= link_to "Create new character", new_character_path %>
 
 <% @characters.each do |char| %>
-  <h3><%= char.title %></h3>
+  <h3><%= link_to char.title, character_path(char) %></h3>
   <p><%= char.subtitle %></p>
   <%= image_tag char.thumb_image unless char.thumb_image.nil? %>
   <p><%= char.body %></p>
-  <%= link_to "Edit this character", edit_character_path(char.id) %>
+  <%= link_to "Edit this character", edit_character_path(char) %>
   <p> ____________________________________________ </p>
 <% end %>
