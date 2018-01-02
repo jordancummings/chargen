@@ -1,3 +1,9 @@
 <h1>Character Templates</h1>
 
-<%=  %>
+<% @characters.each do |char| %>
+  <h3><%= char.title %></h3>
+  <p><%= char.subtitle %></p>
+  <%= image_tag char.thumb_image %>
+  <p><%= char.body %></p>
+  <p> ____________________________________________ </p>
+<% end %>
