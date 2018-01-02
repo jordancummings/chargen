@@ -3,7 +3,7 @@
 <% @characters.each do |char| %>
   <h3><%= char.title %></h3>
   <p><%= char.subtitle %></p>
-  <%= image_tag char.thumb_image %>
+  <%= image_tag char.thumb_image if !char.thumb_image.nil? %>
   <p><%= char.body %></p>
   <p> ____________________________________________ </p>
 <% end %>
