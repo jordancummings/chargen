@@ -24,6 +24,19 @@ class CharactersController < ApplicationController
   end
 
   def edit
+    @characters = Character.find(params[:id])
+  end
+
+  def update
+    @character = Character.find(params[:id])
+    respond_to do |format|
+      if @character.update(params.require(:character).permit(:title, :subtitle, :body))
+        format.html { redirect_to characters_path, notice: 'Character was successfully updated.' }
+      else
+        format.html { render :edit }
+      end
+    end
+
   end
 
   def destroy
