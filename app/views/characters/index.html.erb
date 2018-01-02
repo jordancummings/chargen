@@ -1,9 +1,12 @@
 <h1>Character Templates</h1>
 
+<%= link_to "Create new character", new_character_path %>
+
 <% @characters.each do |char| %>
   <h3><%= char.title %></h3>
   <p><%= char.subtitle %></p>
   <%= image_tag char.thumb_image unless char.thumb_image.nil? %>
   <p><%= char.body %></p>
+  <%= link_to "Edit this character", edit_character_path(char.id) %>
   <p> ____________________________________________ </p>
 <% end %>
