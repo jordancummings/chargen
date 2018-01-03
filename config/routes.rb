@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  resources :characters
+  resources :characters, except: [:show]
+
+  get 'character/:id', to: 'characters#show', as: 'character_show'
 
   get 'generator', to: 'pages#generator'
   get 'about', to: 'pages#about'
