@@ -1,0 +1,22 @@
+<h1>Edit this Character</h1>
+
+<%= form_for(@characters) do |f| %>
+  <div class="field">
+    <%= f.label :character_name %>
+    <%= f.text_field :character_name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :character_description %>
+    <%= f.text_field :character_description %>
+  </div>
+
+  <div class="field">
+    <%= f.label :character_background %>
+    <%= f.text_area :character_background %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
