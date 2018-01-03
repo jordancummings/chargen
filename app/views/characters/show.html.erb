@@ -1,9 +1,9 @@
-<h1>Character show page</h1>
+<h1>The Story of <%= @characters.character_name %></h1>
 
 <%= image_tag @characters.main_image %>
 
-<h1><%= @characters.title %></h1>
+<h1><%= @characters.character_name %></h1>
 
-<em><%= @characters.subtitle %></em>
+<em><%= @characters.character_description %></em>
 
-<p><%= @characters.body %></p>
+<p><%= @characters.character_background %></p>

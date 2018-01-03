@@ -9,7 +9,7 @@ class CharactersController < ApplicationController
   end
 
   def create
-    @characters = Character.new(params.require(:character).permit(:title, :subtitle, :body))
+    @characters = Character.new(params.require(:character).permit(:character_name, :character_description, :character_background))
 
     respond_to do |format|
       if @characters.save
@@ -31,7 +31,7 @@ class CharactersController < ApplicationController
   def update
     @character = Character.find(params[:id])
     respond_to do |format|
-      if @character.update(params.require(:character).permit(:title, :subtitle, :body))
+      if @character.update(params.require(:character).permit(:character_name, :character_description, :character_background))
         format.html { redirect_to characters_path, notice: 'Character was successfully updated.' }
       else
         format.html { render :edit }
@@ -41,6 +41,11 @@ class CharactersController < ApplicationController
   end
 
   def destroy
+    @character = Character.find(params[:id])
+    @character.destroy
+    respond_to do |f|
+      f.html { redirect_to characters_url, notice: "Character info deleted"}
+    end
   end
 
 end

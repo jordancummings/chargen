@@ -2,18 +2,18 @@
 
 <%= form_for(@characters) do |f| %>
   <div class="field">
-    <%= f.label :title %>
-    <%= f.text_field :title %>
+    <%= f.label :character_name %>
+    <%= f.text_field :character_name %>
   </div>
 
   <div class="field">
-    <%= f.label :subtitle %>
-    <%= f.text_field :subtitle %>
+    <%= f.label :character_description %>
+    <%= f.text_field :character_description %>
   </div>
 
   <div class="field">
-    <%= f.label :body %>
-    <%= f.text_area :body %>
+    <%= f.label :character_background %>
+    <%= f.text_area :character_background %>
   </div>
 
   <div class="actions">
