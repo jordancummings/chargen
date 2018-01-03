@@ -8,6 +8,6 @@
   <%= image_tag char.thumb_image unless char.thumb_image.nil? %>
   <p><%= char.character_background %></p>
   <%= link_to "Edit this character", edit_character_path(char) %>
-  <%= link_to 'Delete this character', character_path(char), method: :delete, data: { confirm: 'Are you sure?' } %>
+  <%= link_to 'Delete this character', character_path(char), method: :delete, data: { confirm: 'Are you sure you want to delete this character?' } %>
   <p> ____________________________________________ </p>
 <% end %>
