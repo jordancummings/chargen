@@ -1,2 +1,14 @@
-<h1>Pages#generator</h1>
-<p>Find me in app/views/pages/generator.html.erb</p>
+<h1>Character Generator</h1>
+<p>Click one of the buttons below to generate a random NPC or player character!</p>
+
+<%= form_with do |form| %>
+  <div class="form-group">
+    <%= form.submit "Submit", class: 'btn btn-outline-primary' %>
+  </div>
+<% end %>
+
+<%= form_with do |form| %>
+  <div class="form-group">
+    <%= form.submit "Submit", class: 'btn btn-outline-primary' %>
+  </div>
+<% end %>
