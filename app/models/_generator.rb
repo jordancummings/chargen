@@ -8,7 +8,7 @@ class CharacterGenerator
 
   @NPCProfession = %w[Jeweler Alchemist Blacksmith Leatherworker Tailor Brewer Carpenter Glassblower Mason Painter Sculptor Potter Tinkerer Weaver Woodcarver Forger Engineer Cook Performer Navigator Guide]
 
-  @alignment = ['Lawful Good', 'Lawful Neutral', 'Lawful Evil', 'Neutral Good', 'True Neutral', 'Neutral Evil', 'Chaotic Good', 'Chaotic Neutral', 'Chaotic Evil']
+  @alignment = %w[LG LN NG TN CG CN LG LN NG TN CG CN LG LN NG TN CG CN LG LN NG TN CG CN CE NE LE]
 
   @background = ['Acolyte', 'Charlatan', 'Criminal', 'Entertainer', 'Folk Hero', 'Guild Artisan', 'Hermit', 'Noble', 'Outlander', 'Sage', 'Sailor', 'Soldier', 'Urchin']
 
