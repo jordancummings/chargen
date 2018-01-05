@@ -1,5 +1,4 @@
 class CharacterGenerator
-  require 'pry'
   @gender = %w[Male Female]
 
   @race = ['Dwarf', 'Elf', 'Halfling', 'Human', 'Dragonborn', 'Gnome', 'Half-Elf', 'Half-Orc', 'Tiefling']
